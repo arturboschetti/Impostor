@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const numSalaDisplay = document.getElementById("numSalaDisplay");
 
   const tituloPapel = document.getElementById("tituloPapel");
-  const temaSorteado = document.getElementById("temaSorteado");
   const palavraSecreta = document.getElementById("palavraSecreta");
   const dicaPalavra = document.getElementById("dicaPalavra");
   const primeiroFalar = document.getElementById("primeiroFalar");
@@ -105,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (dados.status === "jogando") {
       telaJogo.style.display = "block";
       btnIrVotacao.style.display = souAdmin ? "block" : "none";
-      temaSorteado.textContent = `TEMA: ${dados.tema}`;
       primeiroFalar.textContent = dados.primeiroJogador;
 
       // Exibe o tema e quem começa para todo mundo
@@ -113,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
         telaJogo.style.backgroundColor = "#ff4d4d";
         tituloPapel.textContent = "VOCÊ É O IMPOSTOR!";
         palavraSecreta.textContent = "???";
-        dicaPalavra.textContent = `Dica: ${dados.dica} (Tente se misturar!)`;
+        dicaPalavra.textContent = `Dica: ${dados.dica}`;
         dicaPalavra.style.display = "block";
       } else {
         telaJogo.style.backgroundColor = "#4d79ff";
