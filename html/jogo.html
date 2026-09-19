@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo Impostor</title>
+    <link rel="stylesheet" href="../css/jogo.css" />
+  </head>
+  <body>
+    <div id="telaLobby">
+      <h2>Sala: <span id="numSalaDisplay"></span></h2>
+      <h3>Jogadores:</h3>
+      <ul id="listaJogadores"></ul>
+
+      <div id="areaAdmin">
+        <label for="selectTema">Escolher tema:</label>
+        <select id="selectTema">
+          <option value="Aleatorio">Sorteio aleatório</option>
+        </select>
+        <button id="btnComecar">Começar jogo</button>
+      </div>
+
+      <p id="txtAguardando">Aguardando o líder iniciar a partida...</p>
+    </div>
+
+    <div id="telaJogo">
+      <h2 id="tituloPapel"></h2>
+      <h1 id="palavraSecreta"></h1>
+      <p id="dicaPalavra"></p>
+      <button id="btnIrVotacao">Ir para votação</button>
+    </div>
+
+    <div id="telaVotacao">
+      <h2>Quem é o impostor?</h2>
+      <div id="opcoesVotacao"></div>
+      <p id="statusVotos"></p>
+      <button id="btnEncerrarVotacao">Revelar resultado</button>
+    </div>
+
+    <div id="telaResultado">
+      <h2 id="tituloResultado"></h2>
+      <p id="identidadeImpostor"></p>
+      <button id="btnJogarNovamente">Jogar novamente</button>
+      <button id="btnExcluirSala">Excluir sala</button>
+    </div>
+
+    <script type="module" src="../js/jogo.js"></script>
+  </body>
+</html>
