@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
           status: "jogando",
           impostor: impostorSorteado,
           palavra: sorteada.palavra,
-          dica: sorteada.dica,
+          dica: sorteada.dicas.join(" - "),
           tema: temaEscolhido,
           primeiroJogador: primeiroASerSorteado,
           votos: null,
