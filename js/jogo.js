@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const temaSorteado = document.getElementById("temaSorteado");
   const palavraSecreta = document.getElementById("palavraSecreta");
   const dicaPalavra = document.getElementById("dicaPalavra");
+  const primeiroFalar = document.getElementById("primeiroFalar");
 
   const btnIrVotacao = document.getElementById("btnIrVotacao");
   const opcoesVotacao = document.getElementById("opcoesVotacao");
@@ -104,6 +105,8 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (dados.status === "jogando") {
       telaJogo.style.display = "block";
       btnIrVotacao.style.display = souAdmin ? "block" : "none";
+      temaSorteado.textContent = `TEMA: ${dados.tema}`;
+      primeiroFalar.textContent = dados.primeiroJogador;
 
       // Exibe o tema e quem começa para todo mundo
       if (meuNome === dados.impostor) {

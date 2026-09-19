@@ -105,6 +105,10 @@ button:disabled {
   margin-top: 16px;
 }
 
+#primeiroFalar {
+  color: #f1c40f;
+}
+
 #btnIrVotacao {
   background: #f39c12;
 }
